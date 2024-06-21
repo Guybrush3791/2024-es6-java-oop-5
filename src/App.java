@@ -12,10 +12,9 @@ public class App {
      * Crea una classe astratta:
      * Definisci una classe astratta chiamata NotificatoreBase che implementa
      * Notificatore.
-     * Aggiungi un campo protetto String destinatario e un costruttore che
+     * Aggiungi un campo private String destinatario e un costruttore che
      * inizializza questo campo.
-     * Implementa un metodo ottieniDestinatario() che ritorna il valore del campo
-     * destinatario.
+     * Implementa le proprieta' getter/setter per la variabile d'istanza.
      * 
      * 
      * Implementa le classi concrete:
@@ -24,7 +23,7 @@ public class App {
      * Ogni classe dovrebbe implementare il metodo inviaNotifica in modi che
      * riflettano il mezzo di comunicazione (ad esempio, la notifica via email
      * potrebbe includere un oggetto email, quella via SMS potrebbe iniziare con
-     * "SMS a:").
+     * "SMS a:", ecc).
      * 
      * 
      * Testing:
