@@ -35,5 +35,76 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
+        // notifyTest();
+        notifyNumberCounter();
+    }
+
+    public static void notifyTest() {
+
+        Notificatore emailNotificatore = new EmailNotificatore("mia@mail.com");
+        emailNotificatore.inviaNotifica("Hello there! This is my mail account. Hang me out!");
+        System.out.println(emailNotificatore);
+
+        Notificatore emailNotificatore2 = new EmailNotificatore("tua@mail123.com");
+        emailNotificatore2.inviaNotifica("Hello there! This is my mail account. Hang me out!");
+        System.out.println(emailNotificatore2);
+
+        Notificatore smsNotificatore = new SMSNotificatore("1234567890");
+        smsNotificatore.inviaNotifica("Hello there! This is my phone number. Hang me out!");
+        System.out.println(smsNotificatore);
+
+        Notificatore smsNotificatore2 = new SMSNotificatore("0987654321");
+        smsNotificatore2.inviaNotifica("Hello there! This is my phone number. Hang me out!");
+        System.out.println(smsNotificatore2);
+
+        Notificatore inAppNotificatore = new InAppNotificatore("#12345");
+        inAppNotificatore.inviaNotifica("Hello there! This is my in-app account. Hang me out!");
+        System.out.println(inAppNotificatore);
+
+        Notificatore inAppNotificatore2 = new InAppNotificatore("#abcdefg");
+        inAppNotificatore2.inviaNotifica("Hello there! This is my in-app account. Hang me out!");
+        System.out.println(inAppNotificatore2);
+    }
+
+    public static void notifyNumberCounter() {
+
+        NotificatoreBase emailNotificatore = new EmailNotificatore("mia@mail.com");
+        emailNotificatore.inviaNotifica("Hello there! This is my mail account. Hang me out!");
+        System.out.println(emailNotificatore);
+
+        NotificatoreBase emailNotificatore2 = new EmailNotificatore("tua@mail123.com");
+        emailNotificatore2.inviaNotifica("Hello there! This is my mail account. Hang me out!");
+        System.out.println(emailNotificatore2);
+
+        NotificatoreBase smsNotificatore = new SMSNotificatore("1234567890");
+        smsNotificatore.inviaNotifica("Hello there! This is my phone number. Hang me out!");
+        System.out.println(smsNotificatore);
+
+        NotificatoreBase smsNotificatore2 = new SMSNotificatore("0987654321");
+        smsNotificatore2.inviaNotifica("Hello there! This is my phone number. Hang me out!");
+        System.out.println(smsNotificatore2);
+
+        NotificatoreBase inAppNotificatore = new InAppNotificatore("#12345");
+        inAppNotificatore.inviaNotifica("Hello there! This is my in-app account. Hang me out!");
+        System.out.println(inAppNotificatore);
+
+        NotificatoreBase inAppNotificatore2 = new InAppNotificatore("#abcdefg");
+        inAppNotificatore2.inviaNotifica("Hello there! This is my in-app account. Hang me out!");
+        System.out.println(inAppNotificatore2);
+
+        NotificatoreBase[] nbs = {
+                emailNotificatore,
+                emailNotificatore2,
+                smsNotificatore,
+                smsNotificatore2,
+                inAppNotificatore,
+                inAppNotificatore2 };
+
+        int destinatarioWithNumber = 0;
+
+        // TODO: contare quante notifiche sono state inviate
+        // a destinari che contengono una o piu' cifre nel nome
+
+        System.out.println("Numero di destinatari con cifre: " + destinatarioWithNumber);
     }
 }
