@@ -15,6 +15,15 @@ public abstract class NotificatoreBase implements Notificatore {
         this.destinatario = destinatario;
     }
 
+    public boolean isNumberDestinatario() {
+
+        for (char c : getDestinatario().toCharArray())
+            if (c >= '0' && c <= '9')
+                return true;
+
+        return false;
+    }
+
     @Override
     public String toString() {
 

@@ -100,11 +100,20 @@ public class App {
                 inAppNotificatore,
                 inAppNotificatore2 };
 
-        int destinatarioWithNumber = 0;
-
         // TODO: contare quante notifiche sono state inviate
         // a destinari che contengono una o piu' cifre nel nome
-
+        int destinatarioWithNumber = getDestinatarioWithNumber(nbs);
         System.out.println("Numero di destinatari con cifre: " + destinatarioWithNumber);
+    }
+
+    public static int getDestinatarioWithNumber(NotificatoreBase[] nbs) {
+
+        int destinatarioWithNumber = 0;
+
+        for (NotificatoreBase nb : nbs)
+            if (nb.isNumberDestinatario())
+                destinatarioWithNumber++;
+
+        return destinatarioWithNumber;
     }
 }
