@@ -33,6 +33,16 @@ public class App {
      * risultato (simulato) della notifica.
      */
 
+    // -------------------------------------------------------------------------------
+
+    /**
+     * TODO 2024-06-24:
+     * 
+     * Aggiungere variabili e motodi final per fare in modo di poter contare quante
+     * istanze di notifiche (ogni genere di notifica compreso) e
+     * quante istanze di ogni tipo di notifica sono state fatte.
+     */
+
     public static void main(String[] args) throws Exception {
 
         // notifyTest();
